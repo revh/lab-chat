@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
-import { withKnobs, text, boolean, number, select, object } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, number, select, object, date } from '@storybook/addon-knobs';
 
 import { Button, Welcome } from '@storybook/react/demo';
 import SampleComponent from '../components/SampleComponent';
@@ -23,6 +23,14 @@ storiesOf('SearchBox', module)
       onSubmit={e => { e.preventDefault(); action('onSubmit')(e); }}
       onFocus={action('onFocus')}
       value={text('value')} />
+  ))
+  .add('full example', () => (
+    <SearchBox
+      placeholder={text('placeholder', 'Enter for search...')}
+      onChange={action('onChange')}
+      onSubmit={e => { e.preventDefault(); action('onSubmit')(e); }}
+      onFocus={action('onFocus')}
+      value={text('value')} />
   ));
 
 storiesOf('ChatPreview', module)
@@ -31,10 +39,6 @@ storiesOf('ChatPreview', module)
     <ChatPreview
       title={text('title')}
       image={text('image')}
-      lastMessage={object('lastMessage', {
-        message: text('message', ''),
-        time: text('time', '')
-      })}
       badge={number('badge', 0)}
       status={select('status', { online: 'online', offline: 'offline' }, 'online')}
       active={boolean('active')}
@@ -46,30 +50,15 @@ storiesOf('ChatPreview', module)
       title={text('title', 'Bruce Wayne')}
       image={text('image')}
       lastMessage={object('lastMessage', {
-        message: text('message', 'Hi Robin!'),
-        time: text('time', '3h ago')
+        message: text('message', 'Hi Robin! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae erat at leo luctus rutrum. Suspendisse potenti. Nunc sit amet congue tortor. Morbi tristique aliquet erat vel consectetur.'),
+        time: date('time', (() => { const d = new Date(); d.setHours(d.getHours() - 2); return d })())
       })}
       badge={number('badge', 2)}
       status={select('status', { online: 'online', offline: 'offline' }, 'online')}
       active={boolean('active')}
       onClick={action('onClick')}
     />
-  ))
-
-/*
-
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
   ));
-
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
-*/
 
 storiesOf('SendBox', module)
   .addDecorator(withKnobs)
@@ -84,6 +73,6 @@ storiesOf('SendBox', module)
       value={text('value')} />
   ));
 
-const SampleComponentStories = storiesOf('SampleComponent', module);
-SampleComponentStories.addDecorator(withKnobs({ escapeHTML: false }));
-SampleComponentStories.add('to Storybook', () => <SampleComponent onClick={action('clicked')} focused={boolean('focused', false)}>Sample Component!</SampleComponent>);
+storiesOf('SampleComponent', module)
+  .addDecorator(withKnobs())
+  .add('to Storybook', () => <SampleComponent onClick={action('clicked')} focused={boolean('focused', false)}>Sample Component!</SampleComponent>);

@@ -11,7 +11,7 @@ const SearchContainer = styled.form`
   display: flex;
   flex-direction: row;
   border-radius: 4px;
-  background-color: #f1eded;
+  background-color: #F8F7F7;
   align-items: center;
   height: 48px;
   padding-left: 16px;
@@ -40,7 +40,7 @@ const SearchInput = styled.input`
   font-stretch: normal;
   line-height: 1.5;
   letter-spacing: normal;
-  color: #181c2f;
+  color: #BABBC4;
 
   &:focus {
     outline: none;
@@ -51,7 +51,7 @@ const SearchBox = ({ placeholder, value, onChange, onSubmit }) => (
   <SearchContainer onSubmit={onSubmit} action="">
     <label for="searchInput">
       <IconContainer>
-        <FontAwesomeIcon icon="search" color="#292f4c" />
+        <FontAwesomeIcon icon="search" color="#BABBC4" />
       </IconContainer>
     </label>
 

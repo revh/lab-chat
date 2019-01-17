@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components'
+import moment from 'moment'
 
 const ChatPreviewContainer = styled.div`
   box-sizing: border-box;
@@ -9,6 +10,7 @@ const ChatPreviewContainer = styled.div`
   flex-direction: column;
   padding: 30px;
   background-color: ${props => props.active ? '#454545' : '#ffffff'};
+  cursor: pointer; 
 
   ${props => props.active && css`
     ${Title}, ${Status}, ${MessageBrief}, ${LastMessage} {
@@ -146,7 +148,7 @@ const ChatPreview = ({ title, image, badge, lastMessage, status, active, onClick
         <Title>{title}</Title>
         {!!status && <Status>{status}</Status>}
       </div>
-      {!!lastMessage && <LastMessage>{lastMessage.time}</LastMessage>}
+      {!!lastMessage && <LastMessage>{moment(lastMessage.time).fromNow()}</LastMessage>}
     </CardContainer>
 
     {!!lastMessage && <MessagesBriefContainer>
