@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, number, select, object } from '@storybook/addon-knobs';
 
 import { Button, Welcome } from '@storybook/react/demo';
 import SampleComponent from '../components/SampleComponent';
@@ -27,8 +27,31 @@ storiesOf('SearchBox', module)
 storiesOf('ChatPreview', module)
   .addDecorator(withKnobs)
   .add('to Storybook', () => (
-    <ChatPreview />
-  ));
+    <ChatPreview
+      title={text('title')}
+      image={text('image')}
+      lastMessage={object('lastMessage', {
+        message: text('message', ''),
+        time: text('time', '')
+      })}
+      badge={number('badge', 0)}
+      status={select('status', { online: 'online', offline: 'offline' }, 'online')}
+      onClick={action('onClick')}
+    />
+  ))
+  .add('full example', () => (
+    <ChatPreview
+      title={text('title', 'Lorenzo Greco')}
+      image={text('image', '')}
+      lastMessage={object('lastMessage', {
+        message: text('message', ''),
+        time: text('time', '')
+      })}
+      badge={number('badge', 0)}
+      status={select('status', { online: 'online', offline: 'offline' }, 'online')}
+      onClick={action('onClick')}
+    />
+  ))
 
 /*
 
