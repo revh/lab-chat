@@ -1,10 +1,16 @@
 import styled from 'styled-components'
 
 const SampleComponent = styled.button`
-  color: yellow;
+  color: black;
   border: none;
-  background-color: pink;
+  background-color: ${props => props.focused ? "pink" : "lightblue"};
   padding: 10px;
+  
 `
+
+SampleComponent.defaultProps = {
+  onClick: () => { },
+  focused: false
+}
 
 export default SampleComponent
