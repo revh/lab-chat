@@ -37,19 +37,21 @@ storiesOf('ChatPreview', module)
       })}
       badge={number('badge', 0)}
       status={select('status', { online: 'online', offline: 'offline' }, 'online')}
+      active={boolean('active')}
       onClick={action('onClick')}
     />
   ))
   .add('full example', () => (
     <ChatPreview
-      title={text('title', 'Lorenzo Greco')}
-      image={text('image', '')}
+      title={text('title', 'Bruce Wayne')}
+      image={text('image')}
       lastMessage={object('lastMessage', {
-        message: text('message', ''),
-        time: text('time', '')
+        message: text('message', 'Hi Robin!'),
+        time: text('time', '3h ago')
       })}
-      badge={number('badge', 0)}
+      badge={number('badge', 2)}
       status={select('status', { online: 'online', offline: 'offline' }, 'online')}
+      active={boolean('active')}
       onClick={action('onClick')}
     />
   ))

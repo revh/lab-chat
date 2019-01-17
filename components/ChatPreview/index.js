@@ -1,15 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components'
 
 const ChatPreviewContainer = styled.div`
   box-sizing: border-box;
   height: 143px;
   border-radius: 6px;
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  border: 1px solid #cbcbcb;
   padding: 30px;
+  background-color: ${props => props.active ? '#454545' : '#ffffff'};
+
+  ${props => props.active && css`
+    ${Title}, ${Status}, ${MessageBrief}, ${LastMessage} {
+      color: #fff;
+      opacity: 1;
+    }
+  `}
 `
 
 const PictureContainer = styled.div`
@@ -22,8 +28,8 @@ const Image = styled.img`
   border-radius: 46px;
   width: 46px;
   height: 46px;
-  background: red;
 `
+
 const Title = styled.div`
   height: 22px;
   font-family: Arial;
@@ -34,7 +40,12 @@ const Title = styled.div`
   line-height: 1.22;
   letter-spacing: normal;
   color: #313131;
+  width: 93%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
+
 const Status = styled.div`
   height: 22px;
   opacity: 0.3;
@@ -48,6 +59,7 @@ const Status = styled.div`
   color: #181c2f;
   text-transform: capitalize;
 `
+
 const StatusLed = styled.div`
   position: absolute;
   top: 0;
@@ -122,8 +134,8 @@ const Badge = styled.div`
   color: #ffffff;
 `;
 
-const ChatPreview = ({ title, image, badge, lastMessage, status, onClick }) => (
-  <ChatPreviewContainer onClick={onClick}>
+const ChatPreview = ({ title, image, badge, lastMessage, status, active, onClick }) => (
+  <ChatPreviewContainer onClick={onClick} active={active}>
     <CardContainer>
       <PictureContainer>
         {status && <StatusLed status={status} />}
@@ -150,6 +162,7 @@ ChatPreview.defaultProps = {
   lastMessage: null,
   status: null,
   badge: 0,
+  active: false,
   onClick: () => { }
 }
 

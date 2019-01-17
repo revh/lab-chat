@@ -16,7 +16,6 @@ const SearchContainer = styled.form`
   height: 48px;
   padding-left: 16px;
   padding-right: 16px;
-  opacity: 0.3;
 `;
 
 const IconContainer = styled.div`
