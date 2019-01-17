@@ -1,0 +1,23 @@
+{
+  "name": "lab-chat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/revh/lab-chat.git",
+  "author": "Lorenzo Greco <lorenzo.rev@gmail.com>, Leonardo Lenzi <redocs@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "styled-components": "^4.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@storybook/addon-actions": "^4.1.6",
+    "@storybook/addon-links": "^4.1.6",
+    "@storybook/addons": "^4.1.6",
+    "@storybook/react": "^4.1.6",
+    "babel-loader": "^8.0.5"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}
