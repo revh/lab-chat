@@ -8,6 +8,7 @@ import { withKnobs, text, boolean, number, select, object } from '@storybook/add
 import { Button, Welcome } from '@storybook/react/demo';
 import SampleComponent from '../components/SampleComponent';
 import SearchBox from '../components/SearchBox';
+import SendBox from '../components/SendBox';
 import ChatPreview from '../components/ChatPreview';
 
 
@@ -67,6 +68,19 @@ storiesOf('Button', module)
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 */
+
+storiesOf('SendBox', module)
+  .addDecorator(withKnobs)
+  .add('to Storybook', () => (
+    <SendBox
+      placeholder={text('placeholder')}
+      onChange={action('onChange')}
+      onAttachClick={action('onAttachClick')}
+      onMicClick={action('onMicClick')}
+      onSubmit={e => { e.preventDefault(); action('onSubmit')(e); }}
+      onFocus={action('onFocus')}
+      value={text('value')} />
+  ));
 
 const SampleComponentStories = storiesOf('SampleComponent', module);
 SampleComponentStories.addDecorator(withKnobs({ escapeHTML: false }));
