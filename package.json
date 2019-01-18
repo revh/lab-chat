@@ -1,6 +1,6 @@
 {
   "name": "@revh/lab-chat",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "module": "dist/lab-chat.esm.js",
   "repository": "https://github.com/revh/lab-chat.git",
   "author": "Lorenzo Greco <lorenzo.rev@gmail.com>, Leonardo Lenzi <redocs@gmail.com>, Pasquale Mangialavori <pasquale.mangialavori@gmail.com>",
@@ -48,7 +48,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "rollup": "rollup -c",
-    "version": "yarn run rollup && git add -A dist",
+    "version": "yarn run rollup && git add -Af dist",
     "postversion": "git push && git push --tags"
   }
 }
