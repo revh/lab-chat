@@ -58,7 +58,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 23px;\n  height: 23px;\n  color: #B9BBC4;\n  margin: 0 0 0 6px;\n  font-size: 15px;\n  line-height: 15px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 23px;\n  height: 23px;\n  color: #B9BBC4;\n  margin: 0 0 0 12px;\n  font-size: 15px;\n  line-height: 15px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -391,4 +391,110 @@ ChatPreview.defaultProps = {
   onClick: function onClick() {}
 };
 
-export { SendBox, SearchBox, ChatPreview };
+var bubbleMessage = function bubbleMessage(_ref) {
+  var fill = _ref.fill;
+  return React.createElement("svg", {
+    width: "37",
+    height: "14",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, React.createElement("path", {
+    d: "M25.8 1.381c.43 1.385 2.346 5.392 10.637 9.774.426.226.636.619.533 1.003-.103.384-.498.686-1.008.77-.046.008-1.156.19-3.152.32-5.689.374-17.414.29-32.286-4.425C-.568 8.939 31.28-1.587 25.8 1.381z",
+    fill: fill,
+    "fill-rule": "nonzero"
+  }));
+};
+
+bubbleMessage.defaultProps = {
+  fill: '#ffffff'
+};
+
+function _templateObject6$2() {
+  var data = _taggedTemplateLiteral(["\n  height: 22px;\n  opacity: 0.3;\n  font-family: Arial;\n  font-size: 12px;\n  font-weight: normal;\n  font-style: normal;\n  font-stretch: normal;\n  line-height: 1.83;\n  letter-spacing: normal;\n  color: #181c2f;\n  align-self: flex-end;\n"]);
+
+  _templateObject6$2 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$2() {
+  var data = _taggedTemplateLiteral(["\n  width: auto;\n  font-family: Arial;\n  font-size: 14px;\n  font-weight: normal;\n  font-style: normal;\n  font-stretch: normal;\n  line-height: 1.57;\n  letter-spacing: normal;\n  \n  \n  padding: 20px;\n  border-radius: 100px;\n  display: inline-block;\n  color: #fff;\n  background: #F44A4A;\n"]);
+
+  _templateObject5$2 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$3() {
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  bottom: -8px;\n  left: auto;\n  right: 3px;\n  z-index: -1;\n  transform: rotateY(165deg) rotateZ(-15deg);\n"]);
+
+  _templateObject4$3 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$3() {
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n"]);
+
+  _templateObject3$3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$3() {
+  var data = _taggedTemplateLiteral(["\n    ", " {\n      left: 3px;\n      right: auto;\n      transform: rotate(-15deg);\n    }\n    ", " {\n      color: #000;\n      background: #fff;\n    }\n    ", " {\n      align-self: flex-start;\n    }\n  "]);
+
+  _templateObject2$3 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$3() {
+  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  padding: 0;\n  background-color: transparent;\n  max-width: 50%;\n\n  ", "\n"]);
+
+  _templateObject$3 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var MessageContainer$1 = styled.div(_templateObject$3(), function (props) {
+  return props.received && css(_templateObject2$3(), BubbleMessageContainer, MessageBrief$1, MessageDate);
+});
+var MessageContainerInner = styled.div(_templateObject3$3());
+var BubbleMessageContainer = styled.div(_templateObject4$3());
+var MessageBrief$1 = styled.div(_templateObject5$2());
+var MessageDate = styled.div(_templateObject6$2());
+
+var Message = function Message(_ref) {
+  var message = _ref.message,
+      type = _ref.type,
+      dateMessage = _ref.dateMessage,
+      onClick = _ref.onClick,
+      received = _ref.received;
+  return React.createElement(MessageContainer$1, {
+    received: received,
+    onClick: onClick
+  }, React.createElement(MessageContainerInner, null, React.createElement(MessageBrief$1, null, message), React.createElement(BubbleMessageContainer, null, React.createElement(bubbleMessage, {
+    fill: received ? '#fff' : '#F44A4A'
+  }))), dateMessage && React.createElement(MessageDate, null, moment(dateMessage.time).fromNow()));
+};
+
+Message.defaultProps = {
+  message: null,
+  type: 'text',
+  dateMessage: null,
+  received: true,
+  onClick: function onClick() {}
+};
+
+export { SendBox, SearchBox, ChatPreview, Message };

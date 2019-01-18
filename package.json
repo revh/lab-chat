@@ -1,6 +1,6 @@
 {
   "name": "@revh/lab-chat",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "private": false,
   "module": "dist/lab-chat.esm.js",
   "repository": "https://github.com/revh/lab-chat.git",
