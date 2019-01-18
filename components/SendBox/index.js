@@ -94,7 +94,7 @@ const Button = styled.button`
 
 const SendBox = ({ placeholder, value, onAttachClick, onChange, onMicClick, onSubmit }) => (
   <MessageContainer onSubmit={onSubmit} action="">
-    <label htmlFor="messageInput">
+    <label htmlFor="labChatMessageInput">
       <IconContainer onClick={onAttachClick}>
         <FontAwesomeIcon icon="paperclip" color="#B9BBC4" />
       </IconContainer>
@@ -102,7 +102,7 @@ const SendBox = ({ placeholder, value, onAttachClick, onChange, onMicClick, onSu
 
     <MessageInputContainer>
       <MessageInput
-        id="messageInput"
+        id="labChatMessageInput"
         type="search"
         placeholder={placeholder}
         value={value}

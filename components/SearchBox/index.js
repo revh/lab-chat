@@ -49,7 +49,7 @@ const SearchInput = styled.input`
 
 const SearchBox = ({ placeholder, value, onChange, onSubmit }) => (
   <SearchContainer onSubmit={onSubmit} action="">
-    <label htmlFor="searchInput">
+    <label htmlFor="labChatSearchInput">
       <IconContainer>
         <FontAwesomeIcon icon="search" color="#BABBC4" />
       </IconContainer>
@@ -57,7 +57,7 @@ const SearchBox = ({ placeholder, value, onChange, onSubmit }) => (
 
     <SearchInputContainer>
       <SearchInput
-        id="searchInput"
+        id="labChatSearchInput"
         type="search"
         placeholder={placeholder}
         value={value}
