@@ -49,6 +49,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "rollup": "rollup -c",
+    "build": "rollup -c",
     "version": "yarn run rollup && git add -Af dist",
     "postversion": "git push && git push --tags"
   }

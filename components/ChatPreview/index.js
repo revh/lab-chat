@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components'
 import moment from 'moment'
-
+import defaultAvatar from './defaultAvatar.jpeg';
 const ChatPreviewContainer = styled.div`
   box-sizing: border-box;
   height: 143px;
@@ -160,7 +160,7 @@ const ChatPreview = ({ title, image, badge, lastMessage, status, active, onClick
 
 ChatPreview.defaultProps = {
   title: 'Untitled Chat',
-  image: require('./defaultAvatar.jpeg'),
+  image: defaultAvatar,
   lastMessage: null,
   status: null,
   badge: 0,

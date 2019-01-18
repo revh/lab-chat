@@ -219,6 +219,8 @@ SearchBox.defaultProps = {
   onSubmit: function onSubmit() {}
 };
 
+var defaultAvatar = "data:image/jpeg;base64,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";
+
 function _templateObject12() {
   var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: -4px;\n  right: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-width: 26px;\n  min-height: 26px;\n  max-width: 26px;\n  overflow: hidden;\n  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.08);\n  background-color: #f34848;\n  border-radius: 26px;\n  font-size: 14px;\n  font-style: normal;\n  font-stretch: normal;\n  line-height: normal;\n  letter-spacing: normal;\n  color: #ffffff;\n"]);
 
@@ -381,7 +383,7 @@ var ChatPreview = function ChatPreview(_ref) {
 
 ChatPreview.defaultProps = {
   title: 'Untitled Chat',
-  image: require('./defaultAvatar.jpeg'),
+  image: defaultAvatar,
   lastMessage: null,
   status: null,
   badge: 0,
