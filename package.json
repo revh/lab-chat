@@ -49,7 +49,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "rollup": "rollup -c",
-    "version": "yarn run rollup && git add -Af dist",
+    "version": "yarn run rollup && git add -Af dist && npm publish --access=public",
     "postversion": "git push && git push --tags"
   }
 }
