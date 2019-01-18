@@ -8,3 +8,13 @@
     "styled-components": "^4.1.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
+
+# Getting started
+
+1. `git clone https://github.com/revh/lab-chat`
+
+2. `yarn`
+
+3. `yarn run storybook`
+
+Enjoy :)
