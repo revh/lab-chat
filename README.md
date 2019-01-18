@@ -1,6 +1,10 @@
 # lab-chat
 
-# Peer dependencies (to be installed in the consumer package)
+# Getting started
+
+`yarn add @revh/lab-chat`
+
+### Peer dependencies (to be installed in the consumer package)
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
     "@fortawesome/free-solid-svg-icons": "^5.6.3",
     "@fortawesome/react-fontawesome": "^0.1.4",
@@ -9,7 +13,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
 
-# Getting started
+# Contribute
 
 1. `git clone https://github.com/revh/lab-chat`
 
