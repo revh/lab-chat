@@ -10,6 +10,7 @@ import SampleComponent from '../components/SampleComponent';
 import SearchBox from '../components/SearchBox';
 import SendBox from '../components/SendBox';
 import ChatPreview from '../components/ChatPreview';
+import Message from '../components/Message';
 
 
 //storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
@@ -72,6 +73,19 @@ storiesOf('SendBox', module)
       onFocus={action('onFocus')}
       value={text('value')} />
   ));
+
+  storiesOf('Message', module)
+  .addDecorator(withKnobs)
+  .add('to Storybook', () => (
+    <Message
+      message={text('Messaggio')}
+      dateMessage = {date('time', (() => { const d = new Date(); d.setHours(d.getHours() - 2); return d })())}
+      received = {boolean('Received', true)}
+      type={action('onChange')}
+      onClick={action('onClick')}
+    />
+  ));
+
 
 storiesOf('SampleComponent', module)
   .addDecorator(withKnobs())
