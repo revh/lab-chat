@@ -25,7 +25,7 @@ export default [
 		plugins: [
 			peerDepsExternal(),
 			image({
-				output: `lib/`, // default the root
+				output: `dist/`, // default the root
 				extensions: /\.(png|jpg|jpeg|gif|svg)$/, // support png|jpg|jpeg|gif|svg, and it's alse the default value
 				limit: 8192,  // default 8192(8k)
 				exclude: 'node_modules/**'
