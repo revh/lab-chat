@@ -10,6 +10,7 @@ const MessageContainer = styled.div`
   padding: 0;
   background-color: transparent;
   max-width: 50%;
+  align-self: ${props => props.received ? 'flex-start' : 'flex-end'};
 
   ${props => props.received && css`
     ${BubbleMessageContainer} {
