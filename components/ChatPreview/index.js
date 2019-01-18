@@ -20,7 +20,7 @@ const ChatPreviewContainer = styled.div`
       opacity: 1;
     }
   `}
-`
+`;
 
 const PictureContainer = styled.div`
   position: relative;
@@ -32,7 +32,7 @@ const Image = styled.img`
   border-radius: 46px;
   width: 46px;
   height: 46px;
-`
+`;
 
 const Title = styled.div`
   height: 22px;
@@ -48,7 +48,7 @@ const Title = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-`
+`;
 
 const Status = styled.div`
   height: 22px;
@@ -62,7 +62,7 @@ const Status = styled.div`
   letter-spacing: normal;
   color: #181c2f;
   text-transform: capitalize;
-`
+`;
 
 const StatusLed = styled.div`
   position: absolute;
@@ -169,6 +169,6 @@ ChatPreview.defaultProps = {
   badge: 0,
   active: false,
   onClick: () => { }
-}
+};
 
 export default ChatPreview

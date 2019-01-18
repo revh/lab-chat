@@ -4,9 +4,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperclip, faMicrophoneAlt, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faPaperclip)
-library.add(faMicrophoneAlt)
-library.add(faPaperPlane)
+library.add(faPaperclip);
+library.add(faMicrophoneAlt);
+library.add(faPaperPlane);
 
 const MessageContainer = styled.form`
   box-sizing: border-box;
