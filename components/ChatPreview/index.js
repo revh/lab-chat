@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components'
 import moment from 'moment'
 import defaultAvatar from './defaultAvatar.jpeg';
+
 const ChatPreviewContainer = styled.div`
   box-sizing: border-box;
   height: 143px;
@@ -10,7 +11,8 @@ const ChatPreviewContainer = styled.div`
   flex-direction: column;
   padding: 30px;
   background-color: ${props => props.active ? '#454545' : '#ffffff'};
-  cursor: pointer; 
+  cursor: pointer;
+  overflow: hidden;
 
   ${props => props.active && css`
     ${Title}, ${Status}, ${MessageBrief}, ${LastMessage} {
@@ -80,6 +82,7 @@ const CardContainer = styled.div`
 `;
 
 const LastMessage = styled.div`
+  min-width: 80px;
   height: 22px;
   opacity: 0.3;
   font-family: Arial;
