@@ -21,4 +21,4 @@
 
 3. `yarn run storybook`
 
-Enjoy :)
+[Play with the sandbox :) https://codesandbox.io/s/mq9x9m2vwx](https://codesandbox.io/s/mq9x9m2vwx) 
