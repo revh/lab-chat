@@ -1,6 +1,7 @@
 {
   "name": "@revh/lab-chat",
   "version": "0.0.11",
+  "private": false,
   "module": "dist/lab-chat.esm.js",
   "repository": "https://github.com/revh/lab-chat.git",
   "author": "Lorenzo Greco <lorenzo.rev@gmail.com>, Leonardo Lenzi <redocs@gmail.com>, Pasquale Mangialavori <pasquale.mangialavori@gmail.com>",
