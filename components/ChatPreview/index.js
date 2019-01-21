@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components'
 import moment from 'moment'
 import defaultAvatar from './defaultAvatar.jpeg';
+
 const ChatPreviewContainer = styled.div`
   box-sizing: border-box;
   height: 143px;
@@ -10,7 +11,8 @@ const ChatPreviewContainer = styled.div`
   flex-direction: column;
   padding: 30px;
   background-color: ${props => props.active ? '#454545' : '#ffffff'};
-  cursor: pointer; 
+  cursor: pointer;
+  overflow: hidden;
 
   ${props => props.active && css`
     ${Title}, ${Status}, ${MessageBrief}, ${LastMessage} {
@@ -18,7 +20,7 @@ const ChatPreviewContainer = styled.div`
       opacity: 1;
     }
   `}
-`
+`;
 
 const PictureContainer = styled.div`
   position: relative;
@@ -30,7 +32,7 @@ const Image = styled.img`
   border-radius: 46px;
   width: 46px;
   height: 46px;
-`
+`;
 
 const Title = styled.div`
   height: 22px;
@@ -46,7 +48,7 @@ const Title = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-`
+`;
 
 const Status = styled.div`
   height: 22px;
@@ -60,7 +62,7 @@ const Status = styled.div`
   letter-spacing: normal;
   color: #181c2f;
   text-transform: capitalize;
-`
+`;
 
 const StatusLed = styled.div`
   position: absolute;
@@ -80,6 +82,7 @@ const CardContainer = styled.div`
 `;
 
 const LastMessage = styled.div`
+  min-width: 80px;
   height: 22px;
   opacity: 0.3;
   font-family: Arial;
@@ -166,6 +169,6 @@ ChatPreview.defaultProps = {
   badge: 0,
   active: false,
   onClick: () => { }
-}
+};
 
 export default ChatPreview

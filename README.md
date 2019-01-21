@@ -26,3 +26,9 @@
 # How to release
 
 1. `npm version patch`
+
+# Codesandboxes
+
+Play with the sandbox :) [https://codesandbox.io/s/24xo4m2w60](https://codesandbox.io/s/24xo4m2w60) 
+
+Checkout the final example [https://codesandbox.io/s/lxn5zmvz59](https://codesandbox.io/s/lxn5zmvz59) 

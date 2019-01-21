@@ -252,7 +252,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n  height: 22px;\n  opacity: 0.3;\n  font-family: Arial;\n  font-size: 12px;\n  font-weight: normal;\n  font-style: normal;\n  font-stretch: normal;\n  line-height: 1.83;\n  letter-spacing: normal;\n  text-align: right;\n  color: #181c2f;\n"]);
+  var data = _taggedTemplateLiteral(["\n  min-width: 80px;\n  height: 22px;\n  opacity: 0.3;\n  font-family: Arial;\n  font-size: 12px;\n  font-weight: normal;\n  font-style: normal;\n  font-stretch: normal;\n  line-height: 1.83;\n  letter-spacing: normal;\n  text-align: right;\n  color: #181c2f;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -332,7 +332,7 @@ function _templateObject2$2() {
 }
 
 function _templateObject$2() {
-  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  height: 143px;\n  border-radius: 6px;\n  display: flex;\n  flex-direction: column;\n  padding: 30px;\n  background-color: ", ";\n  cursor: pointer; \n\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  height: 143px;\n  border-radius: 6px;\n  display: flex;\n  flex-direction: column;\n  padding: 30px;\n  background-color: ", ";\n  cursor: pointer;\n  overflow: hidden;\n\n  ", "\n"]);
 
   _templateObject$2 = function _templateObject() {
     return data;
@@ -459,7 +459,7 @@ function _templateObject2$3() {
 }
 
 function _templateObject$3() {
-  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  padding: 0;\n  background-color: transparent;\n  max-width: 50%;\n\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  padding: 0;\n  background-color: transparent;\n  max-width: 50%;\n  align-self: ", ";\n\n  ", "\n"]);
 
   _templateObject$3 = function _templateObject() {
     return data;
@@ -468,6 +468,8 @@ function _templateObject$3() {
   return data;
 }
 var MessageContainer$1 = styled.div(_templateObject$3(), function (props) {
+  return props.received ? 'flex-start' : 'flex-end';
+}, function (props) {
   return props.received && css(_templateObject2$3(), BubbleMessageContainer, MessageBrief$1, MessageDate);
 });
 var MessageContainerInner = styled.div(_templateObject3$3());

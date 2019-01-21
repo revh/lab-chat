@@ -4,9 +4,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperclip, faMicrophoneAlt, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faPaperclip)
-library.add(faMicrophoneAlt)
-library.add(faPaperPlane)
+library.add(faPaperclip);
+library.add(faMicrophoneAlt);
+library.add(faPaperPlane);
 
 const MessageContainer = styled.form`
   box-sizing: border-box;
@@ -94,7 +94,7 @@ const Button = styled.button`
 
 const SendBox = ({ placeholder, value, onAttachClick, onChange, onMicClick, onSubmit }) => (
   <MessageContainer onSubmit={onSubmit} action="">
-    <label htmlFor="messageInput">
+    <label htmlFor="labChatMessageInput">
       <IconContainer onClick={onAttachClick}>
         <FontAwesomeIcon icon="paperclip" color="#B9BBC4" />
       </IconContainer>
@@ -102,7 +102,7 @@ const SendBox = ({ placeholder, value, onAttachClick, onChange, onMicClick, onSu
 
     <MessageInputContainer>
       <MessageInput
-        id="messageInput"
+        id="labChatMessageInput"
         type="search"
         placeholder={placeholder}
         value={value}

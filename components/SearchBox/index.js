@@ -4,7 +4,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faSearch)
+library.add(faSearch);
 
 const SearchContainer = styled.form`
   box-sizing: border-box;
@@ -49,7 +49,7 @@ const SearchInput = styled.input`
 
 const SearchBox = ({ placeholder, value, onChange, onSubmit }) => (
   <SearchContainer onSubmit={onSubmit} action="">
-    <label for="searchInput">
+    <label htmlFor="labChatSearchInput">
       <IconContainer>
         <FontAwesomeIcon icon="search" color="#BABBC4" />
       </IconContainer>
@@ -57,7 +57,7 @@ const SearchBox = ({ placeholder, value, onChange, onSubmit }) => (
 
     <SearchInputContainer>
       <SearchInput
-        id="searchInput"
+        id="labChatSearchInput"
         type="search"
         placeholder={placeholder}
         value={value}
