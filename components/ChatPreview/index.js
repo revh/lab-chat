@@ -5,7 +5,7 @@ import defaultAvatar from './defaultAvatar.jpeg';
 
 const ChatPreviewContainer = styled.div`
   box-sizing: border-box;
-  height: 143px;
+  height: ${props => props.infoPreview ? 'auto' : '143px'};
   border-radius: 6px;
   display: flex;
   flex-direction: column;
@@ -139,8 +139,8 @@ const Badge = styled.div`
   color: #ffffff;
 `;
 
-const ChatPreview = ({ title, image, badge, lastMessage, status, active, onClick }) => (
-  <ChatPreviewContainer onClick={onClick} active={active}>
+const ChatPreview = ({ title, image, badge, lastMessage, status, active, infoPreview, onClick }) => (
+  <ChatPreviewContainer onClick={onClick} active={active} infoPreview={infoPreview}>
     <CardContainer>
       <PictureContainer>
         {status && <StatusLed status={status} />}
@@ -168,6 +168,7 @@ ChatPreview.defaultProps = {
   status: null,
   badge: 0,
   active: false,
+  infoPreview: false,
   onClick: () => { }
 };
 

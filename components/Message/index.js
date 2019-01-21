@@ -10,6 +10,7 @@ const MessageContainer = styled.div`
   padding: 0;
   background-color: transparent;
   max-width: 50%;
+  position: relative;
   align-self: ${props => props.received ? 'flex-start' : 'flex-end'};
 
   ${props => props.received && css`
@@ -24,6 +25,8 @@ const MessageContainer = styled.div`
     }
     ${MessageDate} {
       align-self: flex-start;
+      margin-left: 20px;
+      margin-right: auto;
     }
   `}
 `;
@@ -33,6 +36,7 @@ const MessageContainerInner = styled.div`
   z-index: 2;
   display: flex;
   flex-direction: column;
+  filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, .1));
 `;
 
 const BubbleMessageContainer = styled.div`
@@ -72,6 +76,9 @@ const MessageDate = styled.div`
   letter-spacing: normal;
   color: #181c2f;
   align-self: flex-end;
+  z-index: 3;
+  margin-right: 20px;
+  margin-left: auto;
 `;
 
 const Message = ({ message, type, dateMessage, onClick, received }) => (

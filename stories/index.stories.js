@@ -38,6 +38,7 @@ storiesOf('ChatPreview', module)
       badge={number('badge', 0)}
       status={select('status', { online: 'online', offline: 'offline' }, 'online')}
       active={boolean('active')}
+      infoPreview={boolean('infoPreview')}
       onClick={action('onClick')}
     />
   ))
