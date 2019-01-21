@@ -41,7 +41,7 @@ const IconButtonContainer = styled.div`
   width: 23px;
   height: 23px;
   color: #B9BBC4;
-  margin: 0 0 0 12px;
+  margin: 0 auto;
   font-size: 15px;
   line-height: 15px;
 `;
