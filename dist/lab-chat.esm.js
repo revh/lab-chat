@@ -58,7 +58,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 23px;\n  height: 23px;\n  color: #B9BBC4;\n  margin: 0 0 0 12px;\n  font-size: 15px;\n  line-height: 15px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 23px;\n  height: 23px;\n  color: #B9BBC4;\n  margin: 0 auto;\n  font-size: 15px;\n  line-height: 15px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -108,14 +108,14 @@ var SendBox = function SendBox(_ref) {
     onSubmit: onSubmit,
     action: ""
   }, React.createElement("label", {
-    htmlFor: "messageInput"
+    htmlFor: "labChatMessageInput"
   }, React.createElement(IconContainer, {
     onClick: onAttachClick
   }, React.createElement(FontAwesomeIcon, {
     icon: "paperclip",
     color: "#B9BBC4"
   }))), React.createElement(MessageInputContainer, null, React.createElement(MessageInput, {
-    id: "messageInput",
+    id: "labChatMessageInput",
     type: "search",
     placeholder: placeholder,
     value: value,
@@ -198,12 +198,12 @@ var SearchBox = function SearchBox(_ref) {
     onSubmit: onSubmit,
     action: ""
   }, React.createElement("label", {
-    for: "searchInput"
+    htmlFor: "labChatSearchInput"
   }, React.createElement(IconContainer$1, null, React.createElement(FontAwesomeIcon, {
     icon: "search",
     color: "#BABBC4"
   }))), React.createElement(SearchInputContainer, null, React.createElement(SearchInput, {
-    id: "searchInput",
+    id: "labChatSearchInput",
     type: "search",
     placeholder: placeholder,
     value: value,
@@ -332,7 +332,7 @@ function _templateObject2$2() {
 }
 
 function _templateObject$2() {
-  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  height: 143px;\n  border-radius: 6px;\n  display: flex;\n  flex-direction: column;\n  padding: 30px;\n  background-color: ", ";\n  cursor: pointer;\n  overflow: hidden;\n\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  height: ", ";\n  border-radius: 6px;\n  display: flex;\n  flex-direction: column;\n  padding: 30px;\n  background-color: ", ";\n  cursor: pointer;\n  overflow: hidden;\n\n  ", "\n"]);
 
   _templateObject$2 = function _templateObject() {
     return data;
@@ -341,6 +341,8 @@ function _templateObject$2() {
   return data;
 }
 var ChatPreviewContainer = styled.div(_templateObject$2(), function (props) {
+  return props.infoPreview ? 'auto' : '143px';
+}, function (props) {
   return props.active ? '#454545' : '#ffffff';
 }, function (props) {
   return props.active && css(_templateObject2$2(), Title, Status, MessageBrief, LastMessage);
@@ -365,10 +367,12 @@ var ChatPreview = function ChatPreview(_ref) {
       lastMessage = _ref.lastMessage,
       status = _ref.status,
       active = _ref.active,
+      infoPreview = _ref.infoPreview,
       onClick = _ref.onClick;
   return React.createElement(ChatPreviewContainer, {
     onClick: onClick,
-    active: active
+    active: active,
+    infoPreview: infoPreview
   }, React.createElement(CardContainer, null, React.createElement(PictureContainer, null, status && React.createElement(StatusLed, {
     status: status
   }), React.createElement(Image, {
@@ -388,6 +392,7 @@ ChatPreview.defaultProps = {
   status: null,
   badge: 0,
   active: false,
+  infoPreview: false,
   onClick: function onClick() {}
 };
 
@@ -400,7 +405,7 @@ var bubbleMessage = function bubbleMessage(_ref) {
   }, React.createElement("path", {
     d: "M25.8 1.381c.43 1.385 2.346 5.392 10.637 9.774.426.226.636.619.533 1.003-.103.384-.498.686-1.008.77-.046.008-1.156.19-3.152.32-5.689.374-17.414.29-32.286-4.425C-.568 8.939 31.28-1.587 25.8 1.381z",
     fill: fill,
-    "fill-rule": "nonzero"
+    fillRule: "nonzero"
   }));
 };
 
@@ -409,7 +414,7 @@ bubbleMessage.defaultProps = {
 };
 
 function _templateObject6$2() {
-  var data = _taggedTemplateLiteral(["\n  height: 22px;\n  opacity: 0.3;\n  font-family: Arial;\n  font-size: 12px;\n  font-weight: normal;\n  font-style: normal;\n  font-stretch: normal;\n  line-height: 1.83;\n  letter-spacing: normal;\n  color: #181c2f;\n  align-self: flex-end;\n"]);
+  var data = _taggedTemplateLiteral(["\n  height: 22px;\n  opacity: 0.3;\n  font-family: Arial;\n  font-size: 12px;\n  font-weight: normal;\n  font-style: normal;\n  font-stretch: normal;\n  line-height: 1.83;\n  letter-spacing: normal;\n  color: #181c2f;\n  align-self: flex-end;\n  z-index: 3;\n  margin-right: 20px;\n  margin-left: auto;\n"]);
 
   _templateObject6$2 = function _templateObject6() {
     return data;
@@ -419,7 +424,7 @@ function _templateObject6$2() {
 }
 
 function _templateObject5$2() {
-  var data = _taggedTemplateLiteral(["\n  width: auto;\n  font-family: Arial;\n  font-size: 14px;\n  font-weight: normal;\n  font-style: normal;\n  font-stretch: normal;\n  line-height: 1.57;\n  letter-spacing: normal;\n  \n  \n  padding: 20px;\n  border-radius: 100px;\n  display: inline-block;\n  color: #fff;\n  background: #F44A4A;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: auto;\n  font-family: Arial;\n  font-size: 14px;\n  font-weight: normal;\n  font-style: normal;\n  font-stretch: normal;\n  line-height: 1.57;\n  letter-spacing: normal;\n  padding: 20px;\n  border-radius: 100px;\n  display: inline-block;\n  color: #fff;\n  background: #F44A4A;\n"]);
 
   _templateObject5$2 = function _templateObject5() {
     return data;
@@ -439,7 +444,7 @@ function _templateObject4$3() {
 }
 
 function _templateObject3$3() {
-  var data = _taggedTemplateLiteral(["\n  position: relative;\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n  filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, .1));\n"]);
 
   _templateObject3$3 = function _templateObject3() {
     return data;
@@ -449,7 +454,7 @@ function _templateObject3$3() {
 }
 
 function _templateObject2$3() {
-  var data = _taggedTemplateLiteral(["\n    ", " {\n      left: 3px;\n      right: auto;\n      transform: rotate(-15deg);\n    }\n    ", " {\n      color: #000;\n      background: #fff;\n    }\n    ", " {\n      align-self: flex-start;\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    ", " {\n      left: 3px;\n      right: auto;\n      transform: rotate(-15deg);\n    }\n    ", " {\n      color: #000;\n      background: #fff;\n    }\n    ", " {\n      align-self: flex-start;\n      margin-left: 20px;\n      margin-right: auto;\n    }\n  "]);
 
   _templateObject2$3 = function _templateObject2() {
     return data;
@@ -459,7 +464,7 @@ function _templateObject2$3() {
 }
 
 function _templateObject$3() {
-  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  padding: 0;\n  background-color: transparent;\n  max-width: 50%;\n  align-self: ", ";\n\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  padding: 0;\n  background-color: transparent;\n  max-width: 50%;\n  position: relative;\n  align-self: ", ";\n\n  ", "\n"]);
 
   _templateObject$3 = function _templateObject() {
     return data;
