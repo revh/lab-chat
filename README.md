@@ -21,11 +21,9 @@
 
 3. `yarn run storybook`
 
-[Play with the sandbox :) https://codesandbox.io/s/mq9x9m2vwx](https://codesandbox.io/s/mq9x9m2vwx) 
-
 # How to release
 
-1. `npm version patch`
+1. `npm version patch -m "Release message"`
 
 # Codesandboxes
 
