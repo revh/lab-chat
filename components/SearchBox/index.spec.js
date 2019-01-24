@@ -11,19 +11,21 @@ describe('<SeachBox />', () => {
                 onChange={onChangeMock}
                 onSubmit={onSubmitMock}
                 placeholder='search'
-                autoComplete='off'
             />);
         const form = wrapper.find(SearchContainer);
         const input = wrapper.find(SearchInput);
+        wrapper.setProps({ value: 'pippo' });
+        //console.log(wrapper.debug());
         expect(form.length).toBe(1);
         form.simulate('submit', { key: 'Enter', keyCode: 13 })
         expect(onSubmitMock).toHaveBeenCalled();
     });
 
    it('should meet accessibility guidelines', async () => {
-		const wrapper = renderToHtml(<SearchBox />);
+        const wrapper = renderToHtml(<SearchBox />);
+        //console.log('wrapper', wrapper);
 		const actual = await axe(wrapper);
-        console.log(actual);
+        //console.log(actual);
         expect(actual).toHaveNoViolations();
 	});
 });

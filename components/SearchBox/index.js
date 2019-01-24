@@ -49,7 +49,7 @@ export const SearchInput = styled.input`
 
 const SearchBox = ({ placeholder, value, onChange, onSubmit }) => (
   <SearchContainer onSubmit={onSubmit} action="">
-    <label htmlFor="labChatSearchInput">
+    <label aria-label="search" htmlFor="labChatSearchInput">
       <IconContainer>
         <FontAwesomeIcon icon="search" color="#BABBC4" />
       </IconContainer>
@@ -62,7 +62,6 @@ const SearchBox = ({ placeholder, value, onChange, onSubmit }) => (
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        autoComplete="off"
       />
     </SearchInputContainer>
   </SearchContainer>
