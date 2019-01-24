@@ -6,7 +6,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faSearch);
 
-const SearchContainer = styled.form`
+export const SearchContainer = styled.form`
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -28,7 +28,7 @@ const SearchInputContainer = styled.div`
   flex: 1;
 `;
 
-const SearchInput = styled.input`
+export const SearchInput = styled.input`
   border: none;
   background: none;
   width: 100%;
