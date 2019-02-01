@@ -1,5 +1,5 @@
 # lab-chat
-
+DEMO [https://revh.github.io/lab-chat/](https://revh.github.io/lab-chat/)
 # Getting started
 
 `yarn add @revh/lab-chat`
