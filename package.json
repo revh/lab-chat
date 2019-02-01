@@ -58,7 +58,7 @@
     "test": "jest",
     "test:ci": "jest --runInBand",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -c .storybook -o docs",
     "version": "yarn run build && git add -Af dist && npm publish --access=public",
     "build": "rollup -c",
     "postversion": "git push && git push --tags"
