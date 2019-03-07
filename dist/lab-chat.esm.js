@@ -198,6 +198,7 @@ var SearchBox = function SearchBox(_ref) {
     onSubmit: onSubmit,
     action: ""
   }, React.createElement("label", {
+    "aria-label": "search",
     htmlFor: "labChatSearchInput"
   }, React.createElement(IconContainer$1, null, React.createElement(FontAwesomeIcon, {
     icon: "search",
@@ -207,8 +208,7 @@ var SearchBox = function SearchBox(_ref) {
     type: "search",
     placeholder: placeholder,
     value: value,
-    onChange: onChange,
-    autoComplete: "off"
+    onChange: onChange
   })));
 };
 
