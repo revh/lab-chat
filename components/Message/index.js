@@ -89,7 +89,7 @@ const Message = ({ message, type, dateMessage, onClick, received }) => (
         <BubbleMessage fill={received ? '#fff' : '#F44A4A'} />
       </BubbleMessageContainer>
     </MessageContainerInner>
-    {dateMessage && <MessageDate>{moment(dateMessage.time).fromNow()}</MessageDate>}
+    {dateMessage && <MessageDate>{moment(dateMessage).fromNow()}</MessageDate>}
   </MessageContainer>
 );
 
