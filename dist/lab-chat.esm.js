@@ -424,7 +424,7 @@ function _templateObject6$2() {
 }
 
 function _templateObject5$2() {
-  var data = _taggedTemplateLiteral(["\n  width: auto;\n  font-family: Arial;\n  font-size: 14px;\n  font-weight: normal;\n  font-style: normal;\n  font-stretch: normal;\n  line-height: 1.57;\n  letter-spacing: normal;\n  padding: 20px;\n  border-radius: 100px;\n  display: inline-block;\n  color: #fff;\n  background: #F44A4A;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: auto;\n  font-family: Arial;\n  font-size: 14px;\n  font-weight: normal;\n  font-style: normal;\n  font-stretch: normal;\n  line-height: 1.57;\n  letter-spacing: normal;\n  padding: 20px;\n  border-radius: 100px;\n  display: inline-block;\n  color: #fff;\n  background: #f44a4a;\n"]);
 
   _templateObject5$2 = function _templateObject5() {
     return data;
@@ -444,7 +444,7 @@ function _templateObject4$3() {
 }
 
 function _templateObject3$3() {
-  var data = _taggedTemplateLiteral(["\n  position: relative;\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n  filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, .1));\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n  filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));\n"]);
 
   _templateObject3$3 = function _templateObject3() {
     return data;
@@ -454,7 +454,7 @@ function _templateObject3$3() {
 }
 
 function _templateObject2$3() {
-  var data = _taggedTemplateLiteral(["\n    ", " {\n      left: 3px;\n      right: auto;\n      transform: rotate(-15deg);\n    }\n    ", " {\n      color: #000;\n      background: #fff;\n    }\n    ", " {\n      align-self: flex-start;\n      margin-left: 20px;\n      margin-right: auto;\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n      ", " {\n        left: 3px;\n        right: auto;\n        transform: rotate(-15deg);\n      }\n      ", " {\n        color: #000;\n        background: #fff;\n      }\n      ", " {\n        align-self: flex-start;\n        margin-left: 20px;\n        margin-right: auto;\n      }\n    "]);
 
   _templateObject2$3 = function _templateObject2() {
     return data;
@@ -464,7 +464,7 @@ function _templateObject2$3() {
 }
 
 function _templateObject$3() {
-  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  padding: 0;\n  background-color: transparent;\n  max-width: 50%;\n  position: relative;\n  align-self: ", ";\n\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  display: block;\n  flex-direction: column;\n  padding: 0;\n  background-color: transparent;\n  max-width: 50%;\n  position: relative;\n  align-self: ", ";\n\n  ", "\n"]);
 
   _templateObject$3 = function _templateObject() {
     return data;
